@@ -1,0 +1,1579 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#"
+     xml:base="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#hasSymptom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#hasSymptom"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#BDIsum -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#BDIsum"/>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#age -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#age"/>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#duration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#duration">
+        <rdfs:comment>증상 지속 기간 (0은 2주, 1은 2년)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#psychosis -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#psychosis">
+        <rdfs:comment>정신병 여부 (0은 정신병 동반 X, 1은 정신병 동반 O)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Adolescence_mild_to_moderate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Adolescence_mild_to_moderate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Depression_in_adolescence"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#BDIsum"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Adolescence_severe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Adolescence_severe">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Depression_in_adolescence"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#BDIsum"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#psychosis"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Adolescence_severe_with_psychotic_features -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Adolescence_severe_with_psychotic_features">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Depression_in_adolescence"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#BDIsum"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#psychosis"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Affective_change -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Affective_change">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Sign_and_symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Agitation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Agitation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Affective_change"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Antenatal_depression -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Antenatal_depression">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Dep_type"/>
+        <rdfs:comment>임신 중 주요우울장애</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Antenatal_mild_to_moderate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Antenatal_mild_to_moderate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Antenatal_depression"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#BDIsum"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Antenatal_severe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Antenatal_severe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Antenatal_depression"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#BDIsum"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Antenatal_severe_with_psychotic_features -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Antenatal_severe_with_psychotic_features">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Antenatal_depression"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#BDIsum"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#psychosis"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Changes_in_appetite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Changes_in_appetite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Somatic_change"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Changes_in_sleeping_patterns -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Changes_in_sleeping_patterns">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Somatic_change"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Children_mild_to_moderate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Children_mild_to_moderate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Depression_in_children"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#BDIsum"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Children_severe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Children_severe">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Depression_in_children"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#BDIsum"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#psychosis"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Children_severe_with_psychotic_features -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Children_severe_with_psychotic_features">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Depression_in_children"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#BDIsum"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#psychosis"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Cognitive_change -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Cognitive_change">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Sign_and_symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Concentration_difficulty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Concentration_difficulty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Somatic_change"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Crying -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Crying">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Affective_change"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Decreased_appetite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Decreased_appetite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Changes_in_appetite"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Increased_appetite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Dep_type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Dep_type">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#BDIsum"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Depression_in_adolescence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Depression_in_adolescence">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Major_depressive_disorder"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#age"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>청소년 주요우울장애</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Depression_in_children -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Depression_in_children">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Major_depressive_disorder"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#age"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>소아 주요우울장애</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Early-morning_awakening -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Early-morning_awakening">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Sign_and_symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Empty_mood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Empty_mood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Sign_and_symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Fear_of_losing_control -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Fear_of_losing_control">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Sign_and_symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Fear_that_something_awful_may_happen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Fear_that_something_awful_may_happen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Sign_and_symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Geriatric_depression -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Geriatric_depression">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Major_depressive_disorder"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#age"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>노인 주요우울장애</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Geriatric_mild_to_moderate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Geriatric_mild_to_moderate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Geriatric_depression"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#BDIsum"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Geriatric_severe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Geriatric_severe">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Geriatric_depression"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#BDIsum"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#psychosis"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Geriatric_severe_with_psychotic_features -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Geriatric_severe_with_psychotic_features">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Geriatric_depression"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#BDIsum"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#psychosis"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Guilty_feelings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Guilty_feelings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Cognitive_change"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Hypersomnia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Hypersomnia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Changes_in_sleeping_patterns"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Insomnia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Increased_appetite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Increased_appetite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Changes_in_appetite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Indecisiveness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Indecisiveness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Affective_change"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Insomnia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Insomnia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Changes_in_sleeping_patterns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Irritability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Irritability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Somatic_change"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Leaden_paralysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Leaden_paralysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Sign_and_symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_energy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_energy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Somatic_change"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_interest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_interest">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Affective_change"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_interest_in_sex -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_interest_in_sex">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Somatic_change"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_pleasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_pleasure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Affective_change"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Major_depressive_disorder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Major_depressive_disorder">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Dep_type"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#hasSymptom"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Crying"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_interest"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_pleasure"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Sadness"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#hasSymptom"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:minQualifiedCardinality>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Agitation"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Changes_in_appetite"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Changes_in_sleeping_patterns"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Suicidal_thoughts_or_wishes"/>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Concentration_difficulty"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Indecisiveness"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Crying"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Sadness"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Guilty_feelings"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Worthlessness"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_energy"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Tiredness_or_fatigue"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_interest"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_pleasure"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#duration"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>주요우울장애</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Mixed_anxiety-depressive_disorder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Mixed_anxiety-depressive_disorder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Dep_type"/>
+        <rdfs:comment>혼합형 주요우울장애</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Mood_reactivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Mood_reactivity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Sign_and_symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#PPD_mild_to_moderate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#PPD_mild_to_moderate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Postpartum_depression"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#BDIsum"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#PPD_severe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#PPD_severe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Postpartum_depression"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#BDIsum"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#PPD_severe_with_psychotic_features -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#PPD_severe_with_psychotic_features">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Postpartum_depression"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#BDIsum"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#psychosis"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Past_failure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Past_failure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Cognitive_change"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Persistent_depressive_disorder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Persistent_depressive_disorder">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Dep_type"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#hasSymptom"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                                <owl:onClass>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Changes_in_appetite"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Changes_in_sleeping_patterns"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Pessimism"/>
+                                            <owl:Class>
+                                                <owl:unionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Concentration_difficulty"/>
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Indecisiveness"/>
+                                                </owl:unionOf>
+                                            </owl:Class>
+                                            <owl:Class>
+                                                <owl:unionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_energy"/>
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Tiredness_or_fatigue"/>
+                                                </owl:unionOf>
+                                            </owl:Class>
+                                            <owl:Class>
+                                                <owl:unionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Self_criticalness"/>
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Self_dislike"/>
+                                                </owl:unionOf>
+                                            </owl:Class>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:onClass>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#hasSymptom"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:minQualifiedCardinality>
+                                <owl:onClass>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Agitation"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Changes_in_appetite"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Changes_in_sleeping_patterns"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Suicidal_thoughts_or_wishes"/>
+                                            <owl:Class>
+                                                <owl:unionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Concentration_difficulty"/>
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Indecisiveness"/>
+                                                </owl:unionOf>
+                                            </owl:Class>
+                                            <owl:Class>
+                                                <owl:unionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Crying"/>
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Sadness"/>
+                                                </owl:unionOf>
+                                            </owl:Class>
+                                            <owl:Class>
+                                                <owl:unionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Guilty_feelings"/>
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Worthlessness"/>
+                                                </owl:unionOf>
+                                            </owl:Class>
+                                            <owl:Class>
+                                                <owl:unionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_energy"/>
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Tiredness_or_fatigue"/>
+                                                </owl:unionOf>
+                                            </owl:Class>
+                                            <owl:Class>
+                                                <owl:unionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_interest"/>
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_pleasure"/>
+                                                </owl:unionOf>
+                                            </owl:Class>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:onClass>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#hasSymptom"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Crying"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_interest"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_pleasure"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Sadness"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#duration"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>지속성 우울장애</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Pessimism -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Pessimism">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Cognitive_change"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Postpartum_depression -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Postpartum_depression">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Dep_type"/>
+        <rdfs:comment>산후 주요우울장애</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Premenstrual_dysphoric_disorder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Premenstrual_dysphoric_disorder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Dep_type"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#duration"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>월경전불쾌감장애</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Punishment_feelings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Punishment_feelings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Cognitive_change"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Rejection_sensitivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Rejection_sensitivity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Sign_and_symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Retardation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Retardation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Sign_and_symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Sadness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Sadness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Affective_change"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Seasonal_depression -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Seasonal_depression">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Dep_type"/>
+        <rdfs:comment>계절성 주요우울장애</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Self_criticalness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Self_criticalness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Cognitive_change"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Self_dislike -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Self_dislike">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Cognitive_change"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Sign_and_symptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Sign_and_symptom"/>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Somatic_change -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Somatic_change">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Sign_and_symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Suicidal_thoughts_or_wishes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Suicidal_thoughts_or_wishes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Cognitive_change"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Tense -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Tense">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Sign_and_symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Tiredness_or_fatigue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Tiredness_or_fatigue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Somatic_change"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Worse_in_the_morning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Worse_in_the_morning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Sign_and_symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Worthlessness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Worthlessness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Cognitive_change"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#patient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#patient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#1Atypical_depression -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#1Atypical_depression">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Major_depressive_disorder"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Mood_reactivity"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#hasSymptom"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Changes_in_appetite"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Changes_in_sleeping_patterns"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Leaden_paralysis"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Rejection_sensitivity"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#age"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>비전형적 주요우울장애</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#2Melancholic_depression -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#2Melancholic_depression">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Major_depressive_disorder"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_pleasure"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#hasSymptom"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Changes_in_appetite"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Early-morning_awakening"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Guilty_feelings"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Worse_in_the_morning"/>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Agitation"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Concentration_difficulty"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Retardation"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Empty_mood"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Pessimism"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#age"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>멜랑꼴리아 주요우울장애</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#3Anxious_depression -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#3Anxious_depression">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Major_depressive_disorder"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#hasSymptom"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Agitation"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Concentration_difficulty"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Fear_of_losing_control"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Fear_that_something_awful_may_happen"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Tense"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#age"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>불안형 주요우울장애</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#4MDD_mild_to_moderate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#4MDD_mild_to_moderate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Major_depressive_disorder"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#BDIsum"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#age"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#4MDD_severe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#4MDD_severe">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Major_depressive_disorder"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#BDIsum"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#age"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#psychosis"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#4MDD_severe_with_psychotic_features -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#4MDD_severe_with_psychotic_features">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Major_depressive_disorder"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#BDIsum"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#age"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#psychosis"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Adolescence_mild_to_moderate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Adolescence_severe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Adolescence_severe_with_psychotic_features"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Affective_change"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Cognitive_change"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Somatic_change"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Agitation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Crying"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Indecisiveness"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_interest"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_pleasure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Sadness"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Antenatal_mild_to_moderate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Antenatal_severe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Antenatal_severe_with_psychotic_features"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Changes_in_appetite"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Changes_in_sleeping_patterns"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Concentration_difficulty"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Irritability"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_energy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Loss_of_interest_in_sex"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Tiredness_or_fatigue"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Children_mild_to_moderate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Children_severe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Children_severe_with_psychotic_features"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Geriatric_mild_to_moderate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Geriatric_severe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Geriatric_severe_with_psychotic_features"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Guilty_feelings"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Past_failure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Pessimism"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Punishment_feelings"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Self_criticalness"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Self_dislike"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Suicidal_thoughts_or_wishes"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#Worthlessness"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#PPD_mild_to_moderate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#PPD_severe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#PPD_severe_with_psychotic_features"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#4MDD_mild_to_moderate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#4MDD_severe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/김예림yelimkim/ontologies/2022/5/untitled-ontology-167#4MDD_severe_with_psychotic_features"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
